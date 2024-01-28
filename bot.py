@@ -36,6 +36,7 @@ def insert_submission(submission):
     full_dict[new_key] = new_item[new_key]
     with open(json_file_location, 'w') as f:
         f.write(json.dumps(full_dict))
+    return True
 
 def remove_submission(key):
     try:
