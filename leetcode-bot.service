@@ -1,0 +1,14 @@
+[Unit]
+Description=LeetCode bot service
+After=network-online.target
+
+[Service]
+User=api-user
+ExecStart=/usr/bin/bash run.sh
+WorkingDirectory=/home/api-user/leetcode-bot
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
